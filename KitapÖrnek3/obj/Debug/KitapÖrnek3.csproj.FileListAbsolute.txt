@@ -1,0 +1,11 @@
+C:\Users\Berke\source\repos\KitapÖrnek3\KitapÖrnek3\bin\Debug\KitapÖrnek3.exe.config
+C:\Users\Berke\source\repos\KitapÖrnek3\KitapÖrnek3\bin\Debug\KitapÖrnek3.exe
+C:\Users\Berke\source\repos\KitapÖrnek3\KitapÖrnek3\bin\Debug\KitapÖrnek3.pdb
+C:\Users\Berke\source\repos\KitapÖrnek3\KitapÖrnek3\obj\Debug\KitapÖrnek3.csproj.AssemblyReference.cache
+C:\Users\Berke\source\repos\KitapÖrnek3\KitapÖrnek3\obj\Debug\KitapÖrnek3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Berke\source\repos\KitapÖrnek3\KitapÖrnek3\obj\Debug\KitapÖrnek3.Form1.resources
+C:\Users\Berke\source\repos\KitapÖrnek3\KitapÖrnek3\obj\Debug\KitapÖrnek3.Properties.Resources.resources
+C:\Users\Berke\source\repos\KitapÖrnek3\KitapÖrnek3\obj\Debug\KitapÖrnek3.csproj.GenerateResource.cache
+C:\Users\Berke\source\repos\KitapÖrnek3\KitapÖrnek3\obj\Debug\KitapÖrnek3.csproj.CoreCompileInputs.cache
+C:\Users\Berke\source\repos\KitapÖrnek3\KitapÖrnek3\obj\Debug\KitapÖrnek3.exe
+C:\Users\Berke\source\repos\KitapÖrnek3\KitapÖrnek3\obj\Debug\KitapÖrnek3.pdb
