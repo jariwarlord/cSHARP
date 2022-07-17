@@ -1,0 +1,197 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace WindowsFormsApp2
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+        }
+        SqlConnection con;
+        SqlDataAdapter da;
+        SqlCommand cmd;
+        DataSet ds;
+        DataTable dt = new DataTable();
+        private DataGridView dataGridView1 = new DataGridView();
+
+        void baglantı()
+        {
+            con = new SqlConnection("Server=LAPTOP-54KT81B2;Initial Catalog=isim;Integrated Security=True");
+            da = new SqlDataAdapter("Select *From isim", con);
+            ds = new DataSet();
+            dt = new DataTable();
+            con.Open();
+            da.Fill(dt);
+            dataGridView1.DataSource = da;
+
+            con.Close();
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+ 
+        }
+
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyChar) == 13)
+            {
+                int number = Int32.Parse(textBox1.Text);
+                for(int i = 1; i <= 10; i++)
+                {
+                    listBox1.Items.Add((number % i).ToString());
+                }
+
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string month = textBox2.Text;
+            if (Convert.ToInt32(e.KeyChar) == 13)
+            {
+
+                switch (month)
+                {
+                    case "1":
+                        MessageBox.Show("Ocak");
+                        textBox2.BackColor = Color.Blue;
+                        break;
+                    case "2":
+                        MessageBox.Show("Subat");
+                        textBox2.BackColor = Color.Blue;
+                        break;
+                    case "3":
+                        MessageBox.Show("Mart");
+                        textBox2.BackColor = Color.Pink;
+                        break;
+                    case "4":
+                        MessageBox.Show("Nisan");
+                        textBox2.BackColor = Color.Pink;
+                        break;
+                    case "5":
+                        MessageBox.Show("Mayis");
+                        textBox2.BackColor = Color.Pink;
+                        break;
+                    case "6":
+                        MessageBox.Show("Haziran");
+                        textBox2.BackColor = Color.Orange;
+                        break;
+                    case "7":
+                        MessageBox.Show("Temmuz");
+                        textBox2.BackColor = Color.Orange;
+                        break;
+                    case "8":
+                        MessageBox.Show("Agustos");
+                        textBox2.BackColor = Color.Orange;
+                        break;
+                    case "9":
+                        MessageBox.Show("Eylul");
+                        textBox2.BackColor = Color.Brown;
+                        break;
+                    case "10":
+                        MessageBox.Show("Ekim");
+                        textBox2.BackColor = Color.Brown;
+
+                        break;
+                    case "11":
+                        MessageBox.Show("Kasim");
+                        textBox2.BackColor = Color.Brown;
+
+                        break;
+                    case "12":
+                        MessageBox.Show("Aralik");
+                        textBox2.BackColor = Color.Blue;
+
+                        break;
+                    default:
+                        MessageBox.Show("böyle bir ay yok");
+                        break;
+                }
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int number = Int32.Parse(textBox3.Text);
+            string absValue = Math.Abs(number).ToString();
+            string sqrtValue = Math.Sqrt(Math.Abs(number)).ToString();
+            string squaredValue = (number * number).ToString();
+            MessageBox.Show("Mutlak degeri: " + absValue + "\n" + "Karekökü: " + sqrtValue + "\n" + "Karesi: " + squaredValue);
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyChar) == 13)
+            {
+                string word = textBox4.Text;
+                listBox2.Items.Add(word);
+                textBox4.Text = "";
+            }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            
+            baglantı();
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "insert into isim(isim) values(@isim) ";
+            cmd.Parameters.AddWithValue();
+            cmd.ExecuteNonQuery(); 
+            con.Close();
+            baglantı();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

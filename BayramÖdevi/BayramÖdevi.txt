@@ -1,0 +1,374 @@
+FORM 1
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace Ödev
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+             {
+
+                textBox2.PasswordChar = '\0';
+                
+            }
+            else 
+            {
+
+
+                textBox2.PasswordChar = '*';
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            textBox2.PasswordChar = '*';
+        }
+        SqlConnection baglan;
+        SqlCommand komut;
+        SqlDataReader oku;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string sorgu = "SELECT * FROM Ornek WHERE kullanici_adi=@kullanici_adi AND sifre=@sifre";
+            baglan = new SqlConnection("server=.;Initial Catalog=Bilgi;Integrated Security=True");
+            komut = new SqlCommand(sorgu, baglan);
+            komut.Parameters.AddWithValue("@Kullanici_Adi", textBox1.Text);
+            komut.Parameters.AddWithValue("@Sifre", textBox2.Text);
+            baglan.Open();
+            oku = komut.ExecuteReader();
+            if (oku.Read())
+            {
+                MessageBox.Show("Başarılı Giriş");
+                Form f2 = new Form2();
+                f2.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Hatalı Giriş");
+            }
+            baglan.Close();
+        }
+    }
+}
+
+
+sql
+
+
+1
+a)
+IF EXISTS (SELECT * FROM Bilgi WHERE kullanıcı_adi ='Berke')
+ BEGIN
+ PRINT 'Berke bu tablo içindedir.';
+ END; 
+b & c)
+ SELECT SUM(maas) AS 'Toplam Maaş', MIN(maas) AS 'En Düşük Maaş',  SUM MAX(maas) AS 'En Yüksek Maaş',
+AVG(maas) AS 'Ortalama Maaş' FROM personel WHERE maas>=2000 AND cinsiyet='K';
+
+2)
+
+WHILE EXISTS(SELECT * FROM Employees WHERE Country = 'USA')
+        BEGIN
+            PRINT 'Bu kişiler Amerikadan..'
+            BREAK 
+        END;
+
+SQL
+CREATE Database okul
+CREATE TABLE Ogrenci(
+ogr_no int primary key identity(1,1) NOT NULL,
+ogr_adi nvarchar(50) NOT NULL,
+bolum nvarchar(50) NOT NULL
+);
+CREATE TABLE Ders(
+ders_id int primary key identity(1,1) NOT NULL,
+ders_adi nvarchar(50) NOT NULL
+);
+CREATE TABLE Notlar(
+ogr_no int primary key identity(1,1) NOT NULL,
+ders_id nvarchar(50) NOT NULL,
+sinav1 int NOT NULL,
+sinav2 int NOT NULL
+);
+
+
+INSERT INTO Ogrenci (ogr_no, ogr_adi, bolum)
+VALUES(
+(1311),'Doğuş','CS'),
+((1312),'Barın','IE'),
+((1313),'Mert','ECO'),
+((1314),'Senem','BUS'),
+((1315),'Helin','ECO');
+
+SET IDENTITY_INSERT [dbo].Notlar ON
+SET IDENTITY_INSERT [dbo].Ders OFF
+
+SELECT * FROM Ders
+
+INSERT INTO Ders(ders_id, ders_adi)
+VALUES(
+(1),'Matematik'),
+((2),'Fizik'),
+((3),'Kimya');
+
+INSERT INTO Notlar(ogr_no, ders_id, sinav1, sinav2)
+VALUES(
+(1310),3,100,95)
+(1311),2,100,100),
+((1312),3,100,85),
+((1313),2,55,60),
+((1314),1,95,80),
+((1315),1,95,40);
+
+
+SELECT  * From Notlar
+
+SELECT Ogrenci.ogr_adi,Ogrenci.bolum,Ogrenci.ogr_no 
+FROM ((Ogrenci
+INNER JOIN Notlar ON Notlar.ogr_no = Ogrenci.ogr_no)
+INNER JOIN Ders ON Ders.ders_id = Notlar.ders_id)
+WHERE Ders.ders_adi = 'Matematik';
+
+SELECT Ogrenci.ogr_adi,Ogrenci.bolum,Ogrenci.ogr_no
+FROM ((Ogrenci
+INNER JOIN Notlar ON Notlar.ogr_no = Ogrenci.ogr_no)
+INNER JOIN Ders ON Ders.ders_id = Notlar.ders_id)
+WHERE Ders.ders_adi = 'Matematik' OR  Ders.ders_adi = 'Fizik';
+
+SELECT Ogrenci.ogr_adi,Ogrenci.bolum,Ogrenci.ogr_no 
+FROM ((Ogrenci
+INNER JOIN Notlar ON Notlar.ogr_no = Ogrenci.ogr_no)
+INNER JOIN Ders ON Ders.ders_id = Notlar.ders_id)
+WHERE Ders.ders_adi = 'Matematik' AND  Ders.ders_adi = 'Fizik';
+
+SELECT Ogrenci.ogr_adi,Ogrenci.bolum,Ogrenci.ogr_no,Notlar.sinav1,Notlar.sinav2,(sinav1 + sinav2)/ 2 AS Ortalama
+FROM ((Ogrenci
+INNER JOIN Notlar ON Notlar.ogr_no = Ogrenci.ogr_no)
+INNER JOIN Ders ON Ders.ders_id = Notlar.ders_id)
+WHERE Ders.ders_adi = 'Matematik' AND (sinav1 + sinav2)/ 2 >= 50;
+
+CREATE TABLE Notlar(
+ogr_no int primary key identity(1,1) NOT NULL,
+ders_id nvarchar(50) NOT NULL,
+sinav1 int NOT NULL,
+sinav2 int NOT NULL
+);
+
+
+CREATE TABLE Musteri(
+mkod int primary  key NOT NULL,
+mad nvarchar(50) NOT NULL,
+msyoad nvarchar(50) NOT NULL,
+madres nvarchar(50) NOT NULL,
+mtel int NOT NULL);
+
+CREATE TABLE Arac(
+aracno int primary key NOT NULL,
+marka nvarchar(50) NOT NULL,
+plak nvarchar(50)  NOT NULL,
+fiyat int NOT NULL);
+
+ALTER TABLE Arac
+add model int not null
+
+ALTER TABLE Arac
+add check(model > 1900 AND model < 2015);
+ 
+
+
+
+CREATE TABLE Kiralama(
+mkod int primary  key NOT NULL,
+model int NOT NULL,
+tarih date NOT NULL,
+tes_tarih date NOT NULL,
+test_saati int NOT NULL,
+);
+
+/* 3*/
+ CREATE TABLE Ogrenci1(
+ ogrenci_id int NOT NULL,
+ ogrenci_no int NoT NULL,
+ ogrenci_ad_soyad nvarchar(50) NOT NULL,
+ ogrenci_dogum date NOT NULL,
+ ogrenci_bolumid int NOT NULL);
+
+
+ CREATE TABLE Ogretel(
+ ogretel_id int NOT NULL,
+ ogretel_no int NoT NULL,
+ ogretel_ad_soyad nvarchar(50) NOT NULL,
+ ogretel_unvan nvarchar(50) NOT NULL,
+ ogretel_bolumid int NOT NULL);
+
+ CREATE TABLE Ders1(
+ ders_id INT NOT NULL,
+ ders_ad INT NoT NULL,
+ ogretel_id INT NOT NULL,
+ogretel_bolumid INT NOT NULL);
+
+CREATE TABLE Bolum(
+ bolum_id INT NOT NULL,
+ bolum_ad INT NoT NULL);
+
+ CREATE TABLE OgrenciNot(
+ ogrenci_id INT NOT NULL,
+ ders_id INT NoT NULL,
+ vize INT NOT NULL,
+final INT NOT NULL,
+butunleme INT NOT NULL);
+/*3.1*/
+
+ALTER TABLE Ogrenci1
+add  dogum_tarihi date NOT NULL 
+
+
+ALTER TABLE BOLUM
+ALTER COLUMN bolum_ad varchar(50);
+
+INSERT INTO OgrenciNot(ogrenci_id, ders_id, vize, final,butunleme)
+VALUES(
+(1310),3,30,40,100),
+((1311),2,32,18,100),
+((1312),3,33,44,85),
+((1313),2,55,60,90),
+((1314),1,15,75,80),
+((1315),1,95,40,90);
+
+INSERT INTO Bolum(bolum_id, bolum_ad)
+VALUES(
+1,'BUS'),
+(2,'IE'),
+(3,'CS');
+
+
+
+INSERT INTO Ogrenci1(ogrenci_id,ogrenci_no, ogrenci_ad_soyad, ogrenci_dogum,ogrenci_bolumid)
+VALUES(
+(1311),55,'Doğuş Büyükkayhan','1999-06-01',3),
+((1312),44,'Barın Sağdıç','2001-10-11',2),
+((1313),68,'Mert Tekeci','1995-06-07',1),
+((1314),32,'Senem Öztürk','1999-04-25',1),
+((1315),34,'Helin Seldüz','2001-01-18',2);
+
+ALTER TABLE Ogrenci1
+DROP COLUMN dogum_tarihi
+
+ALTER TABLE Ders1
+ALTER COLUMN ders_ad varchar(50);
+
+INSERT INTO Ders1(ders_id,ders_ad,ogretel_bolumid,ogretel_id)
+VALUES((
+101),'Matematik',1,10),
+((102),'Fizik',2,11),
+((103),'Kimya',3,12);
+
+INSERT INTO Ogretel(ogretel_id,ogretel_ad_soyad,ogretel_unvan,ogretel_bolumid)
+VALUES(41,'Ferkan Kaplanseren','Prof Dr.',1),
+(42,'Sabri Erdem','Doç Dr.',2),
+(43,'Birol Dalar','Yrd. Doç.', 3);
+
+SELECT * FROM Ders1
+
+
+
+
+
+SELECT Ogrenci1.ogrenci_ad_soyad,Ogrenci1.ogrenci_bolumid,Ogrenci1.ogrenci_no,Ders1.ders_ad
+FROM ((Ogrenci1
+INNER JOIN Ders1 ON Ogrenci1.ogrenci_bolumid = Ogrenci1.ogrenci_no)
+INNER JOIN OgrenciNot ON Ders1.ders_id = OgrenciNot.ders_id)
+WHERE Ogrenci1.ogrenci_ad_soyad = 'Doğuş Büyükkayhan';
+
+SELECT Ogrenci1.ogrenci_ad_soyad,Ogrenci1.ogrenci_bolumid,Ogrenci1.ogrenci_no,Ders1.ders_ad
+FROM ((Ogrenci1
+INNER JOIN Ders1 ON Ogrenci1.ogrenci_bolumid = Ogrenci1.ogrenci_no)
+INNER JOIN OgrenciNot ON Ders1.ders_id = OgrenciNot.ders_id)
+WHERE butunleme >  50;
+
+SELECT Ogrenci1.ogrenci_ad_soyad,Ogrenci1.ogrenci_bolumid,Ogrenci1.ogrenci_no,Ders1.ders_ad
+FROM ((Ogrenci1
+INNER JOIN Ders1 ON Ogrenci1.ogrenci_bolumid = Ogrenci1.ogrenci_no)
+INNER JOIN OgrenciNot ON Ders1.ders_id = OgrenciNot.ders_id)
+WHERE ogrenci1.ogrenci_bolumid = 2;
+
+SELECT Ogrenci1.ogrenci_ad_soyad,Ogrenci1.ogrenci_bolumid,Ogrenci1.ogrenci_no,Ders1.ders_ad
+FROM ((Ogrenci1
+INNER JOIN Ders1 ON Ogrenci1.ogrenci_bolumid = Ogrenci1.ogrenci_no)
+INNER JOIN OgrenciNot ON Ders1.ders_id = OgrenciNot.ders_id)
+WHERE Ders1.ders_adi = 'Fizik'
+
+SELECT Ogrenci1.ogrenci_ad_soyad,Ogrenci1.ogrenci_bolumid,Ogrenci1.ogrenci_no,Ders1.ders_ad
+FROM ((Ogrenci1
+INNER JOIN Ders1 ON Ogrenci1.ogrenci_bolumid = Ogrenci1.ogrenci_no)
+INNER JOIN OgrenciNot ON Ders1.ders_id = OgrenciNot.ders_id)
+WHERE Ders1.ders_adi = 'Fizik' or 'Kimya';
+
+/*3.4*/
+SELECT Ogrenci1.ogrenci_ad_soyad,Ogrenci1.ogrenci_bolumid,Ogrenci1.ogrenci_no,OgrenciNot.ders_id, Ders1.ders_ad
+FROM ((Ogrenci1
+INNER JOIN OgrenciNot ON Ogrenci1.ogrenci_id = OgrenciNot.ogrenci_id)
+INNER JOIN Ders1 ON OgrenciNot.ders_id = Ders1.ders_id)
+WHERE butunleme > 60;
+
+
+/*3.5*/
+SELECT 
+COUNT(Ogrenci1.ogrenci_id)
+FROM (Ogrenci1
+INNER JOIN OgrenciNot ON Ogrenci1.ogrenci_id = OgrenciNot.ogrenci_id)
+WHERE butunleme < 60;
+
+/*3.6*/
+SELECT AVG(vize) FROM OgrenciNot
+SELECT AVG(final) FROM OgrenciNot
+SELECT AVG(butunleme) FROM OgrenciNot
+
+
+/*3.7*/
+SELECT * FROM OgrenciNot
+WHERE OgrenciNot.Vize = Null
+
+/*3.8*/
+
+SELECT * FROM Ders1
+INNER JOIN Ogretel ON  Ders1.ogretel_bolumid = Ogretel.ogretel_bolumid
+
+/*3.9*/
+CREATE TRIGGER kayit_silme ON NOTLAR 
+AFTER   DELETE
+AS
+BEGIN
+SELECT 'Not Kaydı Silindi'
+End;
+ 
+
+create trigger kayit_silme1 on ogrenci1
+After delete
+As
+Begin
+Declare @ad varchar(50)
+Select @ad=ogrenci_ad_soyad from deleted
+End
