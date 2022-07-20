@@ -1,0 +1,11 @@
+C:\Users\Berke\source\repos\Korona Takip\Korona Takip\bin\Debug\Korona Takip.exe.config
+C:\Users\Berke\source\repos\Korona Takip\Korona Takip\bin\Debug\Korona Takip.exe
+C:\Users\Berke\source\repos\Korona Takip\Korona Takip\bin\Debug\Korona Takip.pdb
+C:\Users\Berke\source\repos\Korona Takip\Korona Takip\obj\Debug\Korona Takip.csproj.AssemblyReference.cache
+C:\Users\Berke\source\repos\Korona Takip\Korona Takip\obj\Debug\Korona Takip.csproj.SuggestedBindingRedirects.cache
+C:\Users\Berke\source\repos\Korona Takip\Korona Takip\obj\Debug\Korona_Takip.Form1.resources
+C:\Users\Berke\source\repos\Korona Takip\Korona Takip\obj\Debug\Korona_Takip.Properties.Resources.resources
+C:\Users\Berke\source\repos\Korona Takip\Korona Takip\obj\Debug\Korona Takip.csproj.GenerateResource.cache
+C:\Users\Berke\source\repos\Korona Takip\Korona Takip\obj\Debug\Korona Takip.csproj.CoreCompileInputs.cache
+C:\Users\Berke\source\repos\Korona Takip\Korona Takip\obj\Debug\Korona Takip.exe
+C:\Users\Berke\source\repos\Korona Takip\Korona Takip\obj\Debug\Korona Takip.pdb

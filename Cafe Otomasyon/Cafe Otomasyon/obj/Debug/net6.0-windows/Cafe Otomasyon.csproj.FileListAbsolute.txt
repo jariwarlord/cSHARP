@@ -1,0 +1,17 @@
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\bin\Debug\net6.0-windows\Cafe Otomasyon.exe
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\bin\Debug\net6.0-windows\Cafe Otomasyon.deps.json
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\bin\Debug\net6.0-windows\Cafe Otomasyon.runtimeconfig.json
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\bin\Debug\net6.0-windows\Cafe Otomasyon.dll
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\bin\Debug\net6.0-windows\Cafe Otomasyon.pdb
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\Cafe Otomasyon.csproj.AssemblyReference.cache
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\Cafe_Otomasyon.Form1.resources
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\Cafe Otomasyon.csproj.GenerateResource.cache
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\Cafe Otomasyon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\Cafe Otomasyon.AssemblyInfoInputs.cache
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\Cafe Otomasyon.AssemblyInfo.cs
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\Cafe Otomasyon.csproj.CoreCompileInputs.cache
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\Cafe Otomasyon.dll
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\refint\Cafe Otomasyon.dll
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\Cafe Otomasyon.pdb
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\Cafe Otomasyon.genruntimeconfig.cache
+C:\Users\Berke\source\repos\Cafe Otomasyon\Cafe Otomasyon\obj\Debug\net6.0-windows\ref\Cafe Otomasyon.dll

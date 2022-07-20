@@ -1,0 +1,8 @@
+C:\Users\Berke\source\repos\Emlak\Emlak\bin\Debug\Emlak.exe.config
+C:\Users\Berke\source\repos\Emlak\Emlak\bin\Debug\Emlak.exe
+C:\Users\Berke\source\repos\Emlak\Emlak\bin\Debug\Emlak.pdb
+C:\Users\Berke\source\repos\Emlak\Emlak\obj\Debug\Emlak.csproj.AssemblyReference.cache
+C:\Users\Berke\source\repos\Emlak\Emlak\obj\Debug\Emlak.csproj.SuggestedBindingRedirects.cache
+C:\Users\Berke\source\repos\Emlak\Emlak\obj\Debug\Emlak.csproj.CoreCompileInputs.cache
+C:\Users\Berke\source\repos\Emlak\Emlak\obj\Debug\Emlak.exe
+C:\Users\Berke\source\repos\Emlak\Emlak\obj\Debug\Emlak.pdb
