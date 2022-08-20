@@ -1,0 +1,12 @@
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\bin\Debug\LoginOrnek.exe.config
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\bin\Debug\LoginOrnek.exe
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\bin\Debug\LoginOrnek.pdb
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\obj\Debug\LoginOrnek.csproj.AssemblyReference.cache
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\obj\Debug\LoginOrnek.csproj.SuggestedBindingRedirects.cache
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\obj\Debug\LoginOrnek.Form1.resources
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\obj\Debug\LoginOrnek.Properties.Resources.resources
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\obj\Debug\LoginOrnek.csproj.GenerateResource.cache
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\obj\Debug\LoginOrnek.csproj.CoreCompileInputs.cache
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\obj\Debug\LoginOrnek.exe
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\obj\Debug\LoginOrnek.pdb
+C:\Users\berke\Desktop\E-Shop\LoginOrnek\LoginOrnek\obj\Debug\LoginOrnek.Form2.resources
